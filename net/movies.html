@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Netflix Clone - Movies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="logo">NETFLIX</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="trending.html">Trending</a>
+      <a href="newest.html">Newest</a>
+      <a href="tv.html">TV Shows</a>
+      <a href="movies.html">Movies</a>
+      <a href="mylist.html">My List</a>
+    </nav>
+    <div class="user-info">
+      <span id="welcomeUser"></span>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <!-- Movies Section -->
+  <section class="row">
+    <h2>Movies</h2>
+    <div class="row-posters">
+
+      <!-- 🔹 Local Movie Example -->
+      <div class="poster">
+        <video controls>
+          <source src="videos/vikram2022.mp4.mkv" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-title">Vikram (2022)</p>
+        <button class="add-btn">+ My List</button>
+      </div>
+
+      <!-- 🔹 Add more local movies -->
+      <div class="poster">
+        <video controls>
+          <source src="videos/jawan.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-title">Jawan (2023)</p>
+        <button class="add-btn">+ My List</button>
+      </div>
+
+      <div class="poster">
+        <video controls>
+          <source src="videos/pathaan.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="video-title">Pathaan (2023)</p>
+        <button class="add-btn">+ My List</button>
+      </div>
+
+      <!-- 🔹 YouTube Trailers Example -->
+      <div class="poster">
+        <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">Avengers: Endgame</p>
+        <button class="add-btn">+ My List</button>
+      </div>
+
+      <div class="poster">
+        <iframe src="https://www.youtube.com/embed/mqqft2x_Aa4" frameborder="0" allowfullscreen></iframe>
+        <p class="video-title">The Batman</p>
+        <button class="add-btn">+ My List</button>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

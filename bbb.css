@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #8B0000; /* Deep Red sidebar */
+    --secondary-color: #A30000; /* Slightly lighter red for hover effects */
+    --background-light: #f4f7f6; /* Softer gray background */
+    --white: #ffffff;
+    --text-dark: #333333;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-logo {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin-bottom: 5px;
+}
+
+.sidebar-menu li a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.sidebar-menu li a:hover, 
+.sidebar-menu li a.active {
+    background-color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.section.active {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: var(--text-dark);
+}
+
+h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--background-light);
+    padding-bottom: 10px;
+}
+
+/* Dynamic Cards (Removed fixed heights) */
+.card, .card1 {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    padding: 25px;
+    margin-bottom: 25px;
+    height: auto; /* Lets the card stretch to fit the table data naturally */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #6b0000;
+}
+
+/* Modern Tables */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table th {
+    background-color: var(--background-light);
+    color: #555;
+    font-weight: 600;
+}
+
+.table tbody tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Status Badges */
+.badge {
+    background: #dc3545; 
+    color: white; 
+    padding: 4px 10px; 
+    border-radius: 4px; 
+    font-size: 0.9em;
+}
+
+.status-available {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-low {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Smooth transition for tabs */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
